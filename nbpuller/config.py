@@ -103,7 +103,7 @@ class DevelopmentConfig(Config):
     """Configuration for development mode"""
 
     # testing parameters
-    DEBUG = True
+    DEBUG = False
     MOCK_AUTH = True
     MOCK_SERVER = True
     SUPPRESS_START = False
@@ -121,10 +121,10 @@ class DevelopmentConfig(Config):
     COPY_PATH = 'home'
 
     # where users are redirected upon file download success
-    FILE_REDIRECT_PATH = '/notebooks/{destination}'
+    FILE_REDIRECT_PATH = '/jupyter/notebooks/{destination}'
 
     # where users are redirect upon git pull success
-    GIT_REDIRECT_PATH = '/tree/home/{destination}'
+    GIT_REDIRECT_PATH = '/jupyter/tree/home/{destination}'
 
     # allowed sources for file parameter in query
     ALLOWED_URL_DOMAIN = 'http://localhost:8000'
