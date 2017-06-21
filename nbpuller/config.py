@@ -79,16 +79,16 @@ class ProductionConfig(Config):
 
     PORT = 8002
     MOCK_AUTH = True
-    DEBUG = True
+    DEBUG = False
 
     # where file is copied to, by default use current dir
     COPY_PATH = ""
 
     # where users are redirected upon file download success
-    FILE_REDIRECT_PATH = '/user/{username}/notebooks/{destination}'
+    FILE_REDIRECT_PATH = '/jupyter/user/{username}/notebooks/{destination}'
 
     # where users are redirect upon git pull success
-    GIT_REDIRECT_PATH = '/user/{username}/tree/{destination}'
+    GIT_REDIRECT_PATH = '/jupyter/user/{username}/tree/{destination}'
 
     # alowed file extensions
     ALLOWED_FILETYPES = os.environ.get(
