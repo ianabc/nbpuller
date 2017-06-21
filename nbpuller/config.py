@@ -51,8 +51,9 @@ class Config(object):
     # The default and allowed github account(s) that will be pulled from
     # , used only with github.com
     DEFAULT_GITHUB_ACCOUNT = 'data-8'
-    ALLOWED_GITHUB_ACCOUNTS = os.environ.get(
-        'ALLOWED_GITHUB_ACCOUNTS', default=DEFAULT_GITHUB_ACCOUNT).split(DELIMITER)
+    #ALLOWED_GITHUB_ACCOUNTS = os.environ.get(
+    #    'ALLOWED_GITHUB_ACCOUNTS', default=DEFAULT_GITHUB_ACCOUNT).split(DELIMITER)
+    ALLOWED_GITHUB_ACCOUNTS = ['ianabc', 'data-8', 'colliand', 'pimsmath']
 
     # The branch that will be pulled in
     DEFAULT_BRANCH_NAME = 'gh-pages'
